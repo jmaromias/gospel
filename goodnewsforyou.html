@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvation Message</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            color: #2e86de;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .button {
+            background-color: #2e86de;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #1c5cb8;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Gift of Salvation</h1>
+        <p>For God so loved the world, that He gave His only begotten Son, that whosoever believeth in Him should not perish, but have everlasting life. - John 3:16</p>
+        <p>Salvation is a free gift from God, available to all who believe in Jesus Christ. Here is a simple way to understand how to accept this gift:</p>
+        <p><strong>A - Admit</strong> that you are a sinner. (Romans 3:23, Romans 6:23)</p>
+        <p><strong>B - Believe</strong> that Jesus Christ died for your sins and rose again. (Romans 5:8, Romans 10:9)</p>
+        <p><strong>C - Confess</strong> Jesus as your Lord and Savior. (Romans 10:10, 1 John 1:9)</p>
+        <button class="button" onclick="openModal()">Accept the Gift</button>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Congratulations on Your Decision!</h2>
+            <p>If you have prayed to receive Christ, you have made the most important decision of your life. You are now part of God's family. I encourage you to read the Bible, pray daily, and seek a local church where you can grow in your faith.</p>
+            <p>If you want to talk to someone about this decision, don't hesitate to reach out.</p>
+            <p>God bless you on this wonderful journey!</p>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
